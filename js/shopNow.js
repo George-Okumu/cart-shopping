@@ -23,13 +23,13 @@
             if(event.target.parentElement.classList.contains('store-item-icon'))
                 {
                     let fullPath=(event.target.parentElement.previousElementSibling.src);
-                    let pos=fullPath.indexOf("img")+3;
-                    let partialPath=fullPath.slice(pos);
+                    // let pos=fullPath.indexOf("img")+3;
+                    // let partialPath=fullPath.slice(pos);
                     
                     //console.log(partialPath);
                     
                     const item={};
-                    item.img=`img-cart${partialPath}`;
+                    // item.img=`img-cart${partialPath}`;
                     let name=event.target.parentElement.parentElement.nextElementSibling.children[0].children[0].textContent;
                     item.name=name;
                     
@@ -45,8 +45,6 @@
                     cartItem.classList.add('cart-item','d-flex','justify-content-between','text-capitalize','my-3');
                     
                     cartItem.innerHTML=`
-                    
-                    <img src="${item.img}" class="img-fluid " id="item-img" alt="">
                         <div class="item-text">
                           <p id="cart-item-title" class="font-weight-bold mb-0"> ${item.name}</p>
                           <span>$</span>
@@ -57,6 +55,8 @@
                         </a>
                       </div>
                     `;
+
+
                     
                     //select cart
                     const cart=document.getElementById('cart');
