@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- main css -->
   <link rel="stylesheet" href="css/styles.css">
-
+  
   <!-- font awesome -->
   <link rel="stylesheet" href="css/faicons.css">
   <title>Cart</title>
@@ -16,45 +16,26 @@
 </head>
 
 <body>
-  <!-- header -->
-  <header>
-    <nav class="navbar navbar-expand-lg px-4">
-      <div class="collapse navbar-collapse" id="myNav">
-        <div class="nav-info-items d-none d-lg-flex ">
-          <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
-            <span class="cart-info__icon mr-lg-3"><i class="fas fa-shopping-cart"></i></span>
-            <p class="mb-0 text-capitalize"><span id="item-count">Shopping </span> Cart <span class="item-total"></span></p>
-          </div>
-          <!-- end of single info -->
-        </div>
+<!-- Nav -->
+<!-- <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+  <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
+  </div>
+</nav> -->
+<nav class="navbar navbar-expand-lg px-4">
+  <div class="collapse navbar-collapse" id="myNav">
+    <div class="nav-info-items d-none d-lg-flex ">
+      <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart <i class="fas fa-shopping-cart"></i>(<span class="total-count"></span>)</button></div>
       </div>
-    </nav>
-    <!-- end of nav -->
-    <!-- banner  -->
-    <div class="container-fluid">
-      <div class="row max-height justify-content-center align-items-center">
-        <div id="cart" class="cart">
-          <!-- cart total -->
-          <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
-            <h5>total</h5>
-            <h5> $ <strong id="cart-total" class="font-weight-bold">0.00</strong> </h5>
-          </div>
-          <!--end cart total -->
-          <!-- cart buttons -->
-          <div class="cart-buttons-container mt-3 d-flex justify-content-between">
-            <a href="index.html" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear cart</a>
-            <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
-          </div>
-          <!--end of  cart buttons -->
-          <!--  -->
-        </div>
-      </div>
+      <!-- end of single info -->
     </div>
+  </div>
+</nav>
 
-
-  </header>
-
-
+<!-- Main -->
   <!-- store -->
   <section id="store" class="store py-5">
     <div class="container">
@@ -65,14 +46,13 @@
           <div class="card ">
             <div class="img-container">
               <img src="img/architecture.jpg" class="card-img-top store-img" alt="">
-              <span class="store-item-icon">
-                <i class="fas fa-shopping-cart"></i>
-              </span>
+              <span class="store-item-icon"><a href="#" data-name="Architecture" data-price="1500" class="add-to-cart btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
+
             </div>
             <div class="card-body">
               <div class="card-text d-flex justify-content-between text-capitalize">
                 <h5 id="store-item-name">Architecture </h5>
-                <h5 class="store-item-value"> <strong id="store-item-price" class="font-weight-bold">20</strong></h5>
+                <h5 class="store-item-value">Ksh <strong id="store-item-price" class="font-weight-bold">1500</strong></h5>
 
               </div>
             </div>
@@ -83,19 +63,39 @@
         </div>
         <!--end of single store item-->
 
-        <!-- single item -->
-        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item doughnuts" data-item="Black and white bag">
+                <!-- single item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item cupcakes" data-item="architecture">
+                  <div class="card ">
+                    <div class="img-container">
+                      <img src="img/flat cone.jpg" class="card-img-top store-img" alt="">
+                      <span class="store-item-icon"><a href="#" data-name="Flat-cone" data-price="1000" class="add-to-cart btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
+        
+                    </div>
+                    <div class="card-body">
+                      <div class="card-text d-flex justify-content-between text-capitalize">
+                        <h5 id="store-item-name">Flat Cone </h5>
+                        <h5 class="store-item-value">Ksh <strong id="store-item-price" class="font-weight-bold">1000</strong></h5>
+        
+                      </div>
+                    </div>
+        
+        
+                  </div>
+                  <!-- end of card-->
+                </div>
+                <!--end of single store item-->
+                        <!-- single item -->
+        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item cupcakes" data-item="g-salad">
           <div class="card ">
             <div class="img-container">
-              <img src="img/blackandwhitebag.jpg" class="card-img-top store-img" alt="">
-              <span class="store-item-icon">
-                <i class="fas fa-shopping-cart"></i>
-              </span>
+              <img src="img/g-salad.jpg" class="card-img-top store-img" alt="">
+              <span class="store-item-icon"><a href="#" data-name="G-salad" data-price="1500" class="add-to-cart btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
+
             </div>
             <div class="card-body">
               <div class="card-text d-flex justify-content-between text-capitalize">
-                <h5 id="store-item-name">Black and White Bag</h5>
-                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">20</strong></h5>
+                <h5 id="store-item-name">G-salad</h5>
+                <h5 class="store-item-value">Ksh <strong id="store-item-price" class="font-weight-bold">1500</strong></h5>
 
               </div>
             </div>
@@ -104,27 +104,10 @@
           </div>
           <!-- end of card-->
         </div>
-
-        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item cupcakes" data-item="flat cone">
-          <div class="card ">
-            <div class="img-container">
-              <img src="img/flat cone.jpg" class="card-img-top store-img" alt="">
-              <span class="store-item-icon">
-                <i class="fas fa-shopping-cart"></i>
-              </span>
-            </div>
-            <div class="card-body">
-              <div class="card-text d-flex justify-content-between text-capitalize">
-                <h5 id="store-item-name">Flat cone </h5>
-                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">20</strong></h5>
-
-              </div>
-            </div>
+        <!--end of single store item-->
 
 
-          </div>
-          <!-- end of card-->
-        </div>
+
 <!-- ======================================================================================== -->
         <!-- Add more and more images items -->
 
@@ -134,11 +117,38 @@
 
       </div>
   </section>
-  <!--end of store items -->
+
+
+<!-- Modal uses bootstrap js cdn -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <table class="show-cart table">
+        
+      </table>
+      <div>Total price: Ksh <span class="total-cart"></span></div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" data-target="checkout" class="btn btn-primary">Order now</button>
+      <button class="clear-cart btn btn-danger">Clear Cart</button>
+    </div>
+  </div>
+</div>
+</div> 
+
 
 
   <!-- jquery -->
   <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <!-- script js -->
   <script src="js/shopNow.js"></script>
 </body>
